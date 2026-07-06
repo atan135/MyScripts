@@ -1,0 +1,9 @@
+{
+  "name": "myscripts",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Personal script collection.",
+  "scripts": {
+    "git-stats": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/git-stats/run.ps1"
+  }
+}

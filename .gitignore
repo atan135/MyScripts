@@ -1,0 +1,12 @@
+.env
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+outputs/**
+!outputs/.gitkeep
+!outputs/*/
+!outputs/*/.gitkeep
+scripts/*/outputs/**
+!scripts/*/outputs/.gitkeep
