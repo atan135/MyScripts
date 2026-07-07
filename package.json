@@ -4,6 +4,7 @@
   "private": true,
   "description": "Personal script collection.",
   "scripts": {
-    "git-stats": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/git-stats/run.ps1"
+    "git-stats": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/git-stats/run.ps1",
+    "code-lines": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/code-lines/run.ps1"
   }
 }

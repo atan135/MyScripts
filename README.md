@@ -34,3 +34,25 @@ Linux/macOS:
 ```bash
 ./scripts/git-stats/run.sh
 ```
+
+## Code Lines
+
+`code-lines` scans a configured project directory and lists code files with more than 1000 lines. It also respects a `.gitignore` file in that directory.
+
+Shortcut:
+
+```powershell
+npm run code-lines
+```
+
+Windows:
+
+```powershell
+.\scripts\code-lines\run.ps1
+```
+
+Linux/macOS:
+
+```bash
+./scripts/code-lines/run.sh
+```
