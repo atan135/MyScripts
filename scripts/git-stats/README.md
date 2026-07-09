@@ -1,10 +1,10 @@
 # git-stats
 
-Summarizes commit count and changed lines by day across all configured Git repositories.
+按日期汇总所有配置 Git 仓库的提交数量和代码变更行数。
 
-## Configuration
+## 配置
 
-Configure the script in the project-level `.env` file.
+在项目根目录的 `.env` 文件中配置脚本。
 
 ```env
 GIT_STATS_REPOS=D:\Projects\project-a;D:\Projects\project-b
@@ -15,38 +15,38 @@ GIT_STATS_OUTPUT_FORMAT=table
 GIT_STATS_OUTPUT_FILE=
 ```
 
-`GIT_STATS_REPOS` accepts multiple paths separated by semicolons. Relative paths are resolved from the project root.
+`GIT_STATS_REPOS` 支持多个仓库路径，使用分号分隔。相对路径会从项目根目录解析。
 
-`GIT_STATS_DATE_FROM` and `GIT_STATS_DATE_TO` are optional. Leave both empty to scan all history. `GIT_STATS_DATE_TO` includes the full configured day.
+`GIT_STATS_DATE_FROM` 和 `GIT_STATS_DATE_TO` 都是可选配置。两者都留空时会扫描全部历史记录。`GIT_STATS_DATE_TO` 会包含配置日期当天的完整时间范围。
 
-## Run
+## 运行
 
-Requires Git and Python 3.
+需要安装 Git 和 Python 3。
 
-Shortcut from the project root:
+在项目根目录运行快捷命令：
 
 ```powershell
 npm run git-stats
 ```
 
-Windows:
+Windows：
 
 ```powershell
 .\scripts\git-stats\run.ps1
 ```
 
-Linux/macOS:
+Linux/macOS：
 
 ```bash
 ./scripts/git-stats/run.sh
 ```
 
-## Output Fields
+## 输出字段
 
-| Field | Description |
+| 字段 | 说明 |
 | --- | --- |
-| `date` | Commit date in `YYYY-MM-DD` format. |
-| `commit_count` | Total commits from all configured repositories on that date. |
-| `lines_added` | Total added lines from all configured repositories on that date. |
-| `lines_deleted` | Total deleted lines from all configured repositories on that date. |
-| `lines_changed` | Added plus deleted lines. |
+| `date` | 提交日期，格式为 `YYYY-MM-DD`。 |
+| `commit_count` | 所有配置仓库在该日期的提交总数。 |
+| `lines_added` | 所有配置仓库在该日期的新增行数。 |
+| `lines_deleted` | 所有配置仓库在该日期的删除行数。 |
+| `lines_changed` | 新增行数与删除行数之和。 |

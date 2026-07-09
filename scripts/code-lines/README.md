@@ -1,10 +1,10 @@
 # code-lines
 
-Finds code files whose line count is greater than the configured threshold, sorted by line count descending.
+查找行数大于配置阈值的代码文件，并按行数递减排序。
 
-## Configuration
+## 配置
 
-Configure the script in the project-level `.env` file.
+在项目根目录的 `.env` 文件中配置脚本。
 
 ```env
 CODE_LINES_PROJECT_DIR=D:\Projects\project-a
@@ -15,42 +15,42 @@ CODE_LINES_OUTPUT_FORMAT=table
 CODE_LINES_OUTPUT_FILE=
 ```
 
-`CODE_LINES_PROJECT_DIR` is required. Relative paths are resolved from the script collection root.
+`CODE_LINES_PROJECT_DIR` 是必填配置。相对路径会从脚本集合根目录解析。
 
-`CODE_LINES_MIN_LINES` defaults to `1000`. Files must be greater than this value to appear in the result.
+`CODE_LINES_MIN_LINES` 默认值为 `1000`。只有行数大于该值的文件才会出现在结果中。
 
-`CODE_LINES_EXCLUDE_DIRS` is optional. Add extra directory names separated by semicolons. Common dependency, build, cache, and VCS directories are already excluded by default.
+`CODE_LINES_EXCLUDE_DIRS` 是可选配置。可以用分号分隔额外要排除的目录名。常见依赖、构建、缓存和版本控制目录已经默认排除。
 
-If `CODE_LINES_PROJECT_DIR` contains a `.gitignore` file, matching files and directories are excluded from the line-count scan.
+如果 `CODE_LINES_PROJECT_DIR` 目录下存在 `.gitignore` 文件，匹配的文件和目录会从行数统计中排除。
 
-`CODE_LINES_EXTENSIONS` is optional. Leave empty to scan common code file extensions, or provide a semicolon-separated list such as `.py;.ts;.tsx;.rs`.
+`CODE_LINES_EXTENSIONS` 是可选配置。留空时会扫描常见代码文件扩展名，也可以提供分号分隔的扩展名列表，例如 `.py;.ts;.tsx;.rs`。
 
-## Run
+## 运行
 
-Requires Python 3.
+需要安装 Python 3。
 
-Shortcut from the project root:
+在项目根目录运行快捷命令：
 
 ```powershell
 npm run code-lines
 ```
 
-Windows:
+Windows：
 
 ```powershell
 .\scripts\code-lines\run.ps1
 ```
 
-Linux/macOS:
+Linux/macOS：
 
 ```bash
 ./scripts/code-lines/run.sh
 ```
 
-## Output Fields
+## 输出字段
 
-| Field | Description |
+| 字段 | 说明 |
 | --- | --- |
-| `lines` | Physical line count for the file. |
-| `relative_path` | File path relative to `CODE_LINES_PROJECT_DIR`. |
-| `path` | Absolute file path. Included in CSV and JSON output. |
+| `lines` | 文件的物理行数。 |
+| `relative_path` | 相对于 `CODE_LINES_PROJECT_DIR` 的文件路径。 |
+| `path` | 文件绝对路径。仅在 CSV 和 JSON 输出中包含。 |

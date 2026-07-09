@@ -1,57 +1,57 @@
 # MyScripts
 
-Personal script collection organized by task. Each script lives in `scripts/<script-name>` and can use whichever language is the best fit for that job.
+按任务组织的个人脚本集合。每个脚本放在 `scripts/<script-name>` 目录下，可以根据任务选择最合适的语言实现。
 
-## Setup
+## 初始化
 
-1. Copy `.env.example` to `.env`.
-2. Update the script-specific configuration values.
-3. Make sure Git and Python 3 are available.
-4. Run a script through an npm shortcut or its `run.ps1` / `run.sh` entrypoint.
+1. 复制 `.env.example` 为 `.env`。
+2. 根据需要更新对应脚本的配置项。
+3. 确认本机已安装 Git 和 Python 3。
+4. 通过 npm 快捷命令，或脚本自己的 `run.ps1` / `run.sh` 入口运行。
 
-## Scripts
+## 脚本
 
-See `docs/script-index.md`.
+查看 [脚本索引](docs/脚本索引.md)。
 
-## Git Stats
+## git-stats
 
-`git-stats` aggregates all configured repositories by commit date.
+`git-stats` 按提交日期汇总所有配置的 Git 仓库。
 
-Shortcut:
+快捷命令：
 
 ```powershell
 npm run git-stats
 ```
 
-Windows:
+Windows：
 
 ```powershell
 .\scripts\git-stats\run.ps1
 ```
 
-Linux/macOS:
+Linux/macOS：
 
 ```bash
 ./scripts/git-stats/run.sh
 ```
 
-## Code Lines
+## code-lines
 
-`code-lines` scans a configured project directory and lists code files with more than 1000 lines. It also respects a `.gitignore` file in that directory.
+`code-lines` 扫描配置的项目目录，列出超过 1000 行的代码文件，并遵守该目录下的 `.gitignore`。
 
-Shortcut:
+快捷命令：
 
 ```powershell
 npm run code-lines
 ```
 
-Windows:
+Windows：
 
 ```powershell
 .\scripts\code-lines\run.ps1
 ```
 
-Linux/macOS:
+Linux/macOS：
 
 ```bash
 ./scripts/code-lines/run.sh
